@@ -5,13 +5,19 @@ namespace oopUni
 {
     internal class Program
     {
+        public enum color
+        {
+            RED,
+            GREEN,
+            BLUE
+        }
         public static void Main(string[] args)
         {
-            int[] arr = new int[5] { 1, 2, 3, 4, 5 };
-            foreach (int element in arr)
-            {
-                Console.WriteLine(element);
-            }
+            
+            color c1 = color.BLUE;
+            if (c1 == color.BLUE)
+                Console.WriteLine("The color is BLUE");
+            
         }
     }
 }
