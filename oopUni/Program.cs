@@ -3,21 +3,29 @@ using System;
 namespace oopUni
 
 {
+    public enum Gender
+    {
+        Male,
+        Female
+    }
     internal class Program
     {
-        public enum color
-        {
-            RED,
-            GREEN,
-            BLUE
-        }
         public static void Main(string[] args)
         {
-            
-            color c1 = color.BLUE;
-            if (c1 == color.BLUE)
-                Console.WriteLine("The color is BLUE");
-            
+            double IdealWeight(short height , short age ,Gender gender)
+            {
+                if (gender == Gender.Male)
+                {
+                    return (height - 100 + (double)age / 10) * 0.9;
+                }
+                else
+                {
+                    return (height - 100 + (double)age / 10) * 0.8;
+                }
+            }
+
+            Console.WriteLine(IdealWeight(187, 19, Gender.Male));
+            Console.WriteLine(IdealWeight(187, 19, Gender.Female));
         }
     }
 }
