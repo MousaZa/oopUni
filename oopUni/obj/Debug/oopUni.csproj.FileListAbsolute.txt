@@ -1,0 +1,6 @@
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\bin\Debug\oopUni.exe
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\bin\Debug\oopUni.pdb
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\obj\Debug\oopUni.csproj.AssemblyReference.cache
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\obj\Debug\oopUni.csproj.CoreCompileInputs.cache
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\obj\Debug\oopUni.exe
+C:\Users\mousaZ\RiderProjects\oopUni\oopUni\obj\Debug\oopUni.pdb
