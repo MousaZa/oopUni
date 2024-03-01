@@ -6,11 +6,11 @@ namespace oopUni
     class MyFirstClass
     {
 
-        private int mData;
-        public int data
+        private int mAge = 0;
+        public int age
         {
-            set { mData = value; }
-            get { return mData; }
+            set { if(value > 0 ) mAge = value; }
+            get { return mAge; }
             
         }
     }
@@ -20,8 +20,8 @@ namespace oopUni
         public static void Main(string[] args)
         {
             MyFirstClass myFirstClass = new MyFirstClass();
-            myFirstClass.data = 10;
-            Console.WriteLine(myFirstClass.data);
+            myFirstClass.age = 20;
+            Console.WriteLine(myFirstClass.age);
         }
     }
 }
