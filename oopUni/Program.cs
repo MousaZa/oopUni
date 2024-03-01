@@ -5,15 +5,13 @@ namespace oopUni
 {
     class MyFirstClass
     {
-        public MyFirstClass(int value)
+
+        private int mData;
+        public int data
         {
-            _mValue = value;
-        }
-        
-        int _mValue;
-        public void PrintValue()
-        {
-            Console.WriteLine("the value is " + _mValue);
+            set { mData = value; }
+            get { return mData; }
+            
         }
     }
 
@@ -21,8 +19,9 @@ namespace oopUni
     {
         public static void Main(string[] args)
         {
-            MyFirstClass myFirstClass = new MyFirstClass(5);
-            myFirstClass.PrintValue();
+            MyFirstClass myFirstClass = new MyFirstClass();
+            myFirstClass.data = 10;
+            Console.WriteLine(myFirstClass.data);
         }
     }
 }
