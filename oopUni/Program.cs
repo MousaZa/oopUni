@@ -31,6 +31,11 @@ namespace oopUni
         {
             Console.WriteLine("Object deleted !");
         }
+
+        public int addYears(int years)
+        {
+            return mAge + years;
+        }
     }
 
     internal class Program
@@ -40,6 +45,7 @@ namespace oopUni
             myFirstClass.printAge();
             myFirstClass.setAge(20) ;
             myFirstClass.printAge();
+            Console.WriteLine(myFirstClass.addYears(5));
         }
     }
 }
