@@ -26,6 +26,11 @@ namespace oopUni
         {
             Console.WriteLine("your age is " + mAge);
         }
+
+        ~MyFirstClass()
+        {
+            Console.WriteLine("Object deleted !");
+        }
     }
 
     internal class Program
