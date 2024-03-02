@@ -5,25 +5,36 @@ namespace oopUni
 {
     class MyFirstClass
     {
-        // todo public int value {init; get;} = 0 ;
         private int mAge = 0;
-        public int age
+
+        public MyFirstClass()
         {
-            set { if(value > 0 ) mAge = value; }
-            get { return mAge; }
             
+        }
+
+        public MyFirstClass(int _age)
+        {
+            mAge = _age;
+        }
+
+        public void setAge(int _age)
+        {
+            mAge = _age;
+        }
+
+        public void printAge()
+        {
+            Console.WriteLine("your age is " + mAge);
         }
     }
 
     internal class Program
     {
-        public static void Main(string[] args)
-        {
-            // todo MyFirstClass myFirstClass1 = new MyFirstClass(){value = 10} ;
-            // todo myFirstClass1.value = 20; // error
-            MyFirstClass myFirstClass = new MyFirstClass();
-            myFirstClass.age = 20;
-            Console.WriteLine(myFirstClass.age);
+        public static void Main(string[] args){
+            MyFirstClass myFirstClass = new MyFirstClass(10);
+            myFirstClass.printAge();
+            myFirstClass.setAge(20) ;
+            myFirstClass.printAge();
         }
     }
 }
