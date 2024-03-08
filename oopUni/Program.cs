@@ -3,49 +3,32 @@ using System;
 namespace oopUni
 
 {
-    class MyFirstClass
+    class BaseClass
     {
-        private int mAge = 0;
+        public int bNumber = 10 ;
 
-        public MyFirstClass()
+        
+        public void PrintNumber()
         {
-            
+            Console.WriteLine(bNumber);
         }
-
-        public MyFirstClass(int _age)
+    }
+    class DerivedClass : BaseClass
+    {
+        
+        public int dNumber = 20 ;
+        new public void PrintNumber()
         {
-            mAge = _age;
-        }
-
-        public void setAge(int _age)
-        {
-            mAge = _age;
-        }
-
-        public void printAge()
-        {
-            Console.WriteLine("your age is " + mAge);
-        }
-
-        ~MyFirstClass()
-        {
-            Console.WriteLine("Object deleted !");
-        }
-
-        public int addYears(int years)
-        {
-            return mAge + years;
+            Console.WriteLine(dNumber + base.bNumber);
         }
     }
 
     internal class Program
     {
         public static void Main(string[] args){
-            MyFirstClass myFirstClass = new MyFirstClass(10);
-            myFirstClass.printAge();
-            myFirstClass.setAge(20) ;
-            myFirstClass.printAge();
-            Console.WriteLine(myFirstClass.addYears(5));
+            DerivedClass myFirstClass = new DerivedClass();
+            Console.WriteLine(myFirstClass.bNumber);
+            Console.WriteLine(myFirstClass.dNumber);
         }
     }
 }

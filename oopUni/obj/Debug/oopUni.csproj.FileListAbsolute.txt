@@ -10,3 +10,9 @@ C:\Users\mousz\OneDrive\Masaüstü\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.
 C:\Users\mousz\OneDrive\Masaüstü\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.CoreCompileInputs.cache
 C:\Users\mousz\OneDrive\Masaüstü\oopUni\oopUni\oopUni\obj\Debug\oopUni.exe
 C:\Users\mousz\OneDrive\Masaüstü\oopUni\oopUni\oopUni\obj\Debug\oopUni.pdb
+C:\Users\mousz\oopUni\oopUni\oopUni\bin\Debug\oopUni.exe
+C:\Users\mousz\oopUni\oopUni\oopUni\bin\Debug\oopUni.pdb
+C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.AssemblyReference.cache
+C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.CoreCompileInputs.cache
+C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.exe
+C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.pdb
