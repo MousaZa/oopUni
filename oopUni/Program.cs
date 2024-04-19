@@ -2,47 +2,84 @@
 
 namespace oopUni
 {
-    interface IEmployee
-    {
-        int Id { set; get; }
-        string Name { set; get; }
 
-        void PrintId();
-        void PrintName();
-        
+    
+    internal class InfoClass {
+        public static void printInfo(Point p)
+        {
+            p.printCoordinates();
+        }
+    }
+    internal abstract class Point
+    {
+        public int _x { set; get; }
+        public int _y { set; get; }
+
+        public void printInfo()
+        {
+            Console.WriteLine("This is a POINT!");
+        }
+
+        public abstract void printCoordinates();
     }
 
-    class Sales : IEmployee
+    internal class Point2D : Point
     {
-
-        public Sales(int id,string name)
+        public Point2D()
         {
-            Id = id;
-            Name = name;
+            _x = 0;
+            _y = 0;
         }
-        public int Id { set; get; }
-        public string Name { set; get; }
-
-        public void PrintId()
+        public Point2D(int x , int y)
         {
-            Console.WriteLine(Id);
+            _x = x;
+            _y = y;
         }
 
-        public void PrintName()
+        public override void printCoordinates()
         {
-            Console.WriteLine(Name);
+            Console.WriteLine("The coordinates of the point is ("+_x+","+_y+").");
         }
     }
     
-    
+    internal class Point3D : Point
+    {
+        public int _z { get; set; }
+        public Point3D()
+        {
+            _x = 0;
+            _y = 0;
+            _z = 0;
+        }
+        public Point3D(int x , int y,int z)
+        {
+            _x = x;
+            _y = y;
+            _z = z;
+        }
+
+        public override void printCoordinates()
+        {
+            Console.WriteLine("The coordinates of the point is ("+_x+","+_y+","+_z+").");
+        }
+    }
     
     internal class Program
     {
         public static void Main(string[] args)
         {
-            Sales s = new Sales(2 , "Mousa");
-            s.PrintName();
-            s.PrintId();
+            Point2D point1 = new Point2D();
+            point1.printCoordinates();
+
+            Point2D point2 = new Point2D(3,4);
+            point2.printCoordinates();
+
+            Point3D point3 = new Point3D(3,4,5);
+            point3.printCoordinates();
+            
+            InfoClass.printInfo(point1);
+            InfoClass.printInfo(point2);
+            InfoClass.printInfo(point3);
         }
     }
 }
