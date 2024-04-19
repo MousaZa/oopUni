@@ -2,21 +2,17 @@
 
 namespace oopUni
 {
-    public abstract class Employee
+    interface IEmployee
     {
-        public int Id { set; get; }
-        public string Name { set; get; }
+        int Id { set; get; }
+        string Name { set; get; }
 
-        public abstract void PrintId();
-
-        public void PrintName()
-        {
-            Console.WriteLine(Name);   
-        }
+        void PrintId();
+        void PrintName();
         
     }
 
-    class Sales : Employee
+    class Sales : IEmployee
     {
 
         public Sales(int id,string name)
@@ -24,14 +20,18 @@ namespace oopUni
             Id = id;
             Name = name;
         }
-        // public int Id { set; get; }
-        // public string Name { set; get; }
+        public int Id { set; get; }
+        public string Name { set; get; }
 
-        public override void PrintId()
+        public void PrintId()
         {
             Console.WriteLine(Id);
         }
-        
+
+        public void PrintName()
+        {
+            Console.WriteLine(Name);
+        }
     }
     
     
