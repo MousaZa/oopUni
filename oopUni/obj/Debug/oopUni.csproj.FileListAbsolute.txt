@@ -16,3 +16,9 @@ C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.AssemblyReference.ca
 C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.csproj.CoreCompileInputs.cache
 C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.exe
 C:\Users\mousz\oopUni\oopUni\oopUni\obj\Debug\oopUni.pdb
+C:\Users\Mousa\Desktop\oopUni\oopUni\bin\Debug\oopUni.exe
+C:\Users\Mousa\Desktop\oopUni\oopUni\bin\Debug\oopUni.pdb
+C:\Users\Mousa\Desktop\oopUni\oopUni\obj\Debug\oopUni.csproj.AssemblyReference.cache
+C:\Users\Mousa\Desktop\oopUni\oopUni\obj\Debug\oopUni.csproj.CoreCompileInputs.cache
+C:\Users\Mousa\Desktop\oopUni\oopUni\obj\Debug\oopUni.exe
+C:\Users\Mousa\Desktop\oopUni\oopUni\obj\Debug\oopUni.pdb

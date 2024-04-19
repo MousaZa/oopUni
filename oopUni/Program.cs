@@ -1,36 +1,48 @@
-﻿
-using System;
+﻿using System;
+
 namespace oopUni
-
 {
-    
+    public abstract class Employee
+    {
+        public int Id { set; get; }
+        public string Name { set; get; }
 
+        public abstract void PrintId();
+
+        public void PrintName()
+        {
+            Console.WriteLine(Name);   
+        }
+        
+    }
+
+    class Sales : Employee
+    {
+
+        public Sales(int id,string name)
+        {
+            Id = id;
+            Name = name;
+        }
+        // public int Id { set; get; }
+        // public string Name { set; get; }
+
+        public override void PrintId()
+        {
+            Console.WriteLine(Id);
+        }
+        
+    }
+    
+    
+    
     internal class Program
     {
         public static void Main(string[] args)
         {
-            // Point2D point = new Point2D(3 , 4);
-            // point.ConvertToPolar();
-            Shape shape = new Shape(new Point2D(3,4));
-            // shape.DrawShape();
-            Square square = new Square(new Point2D(3, 4));
-            // square.DrawShape();
-            Circle circle = new Circle(new Point2D(3, 4), 5);
-            // circle.DrawShape();
-            Shape[] shapes =
-            {
-                shape, square, circle
-            };
-
-            foreach (var sh in shapes)
-            {
-                sh.DrawShape();
-                sh.PrintInformation();
-                
-                if (sh is Circle)
-                    ((Circle)sh).PrintArea();
-                Line.DrawLine('x' , 40);
-            }
+            Sales s = new Sales(2 , "Mousa");
+            s.PrintName();
+            s.PrintId();
         }
     }
 }
