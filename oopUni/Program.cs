@@ -1,73 +1,47 @@
 ﻿using System;
+using System.Runtime.Remoting.Contexts;
 
 namespace oopUni
 {
-    internal class Sentence
+
+    internal class Complex
     {
+        private int Real;
+        private int Imaginary;
         
-        private string[] Words; // field
-
-        public string this[int index]
-        {
-            set
-            {
-                try
-                {
-                    Words[index] = value;
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    Console.WriteLine("Index out of range");
-                }
-            }
-            get
-            {
-                try
-                {
-                    return Words[index];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    Console.WriteLine("Index out of range");
-                    return "";
-                }
-            } 
-        }
-
-        public Sentence()
-        {
-            Words = "Today is Friday".Split();
-        }
-
-        public Sentence(string sentence)
-        {
-            Words = sentence.Split();
-        }
-
-        public void PrintWordOfIndex(int index)
-        {
-          Console.WriteLine((index + 1)+ ".Word is: " + this[index]);
-        }
-
-        public void PrintWords()
-        {
-            foreach (var word in Words)
-            {
-                Console.WriteLine(word);
-            }
-        }
+        public int real { set => Real = value; get => Real; }
+        public int imaginary { set => Imaginary = value; get => Imaginary; }
         
+        public Complex(){}
+
+        public Complex(int _real, int _imaginary)
+        {
+            Real = _real;
+            Imaginary = _imaginary;
+        }
+
+        public void PrintNumber()
+        {
+            Console.WriteLine(Real + " + " + Imaginary + "i");
+        }
+
+        public static Complex operator +(Complex complex1, Complex complex2)
+        {
+            Complex result = new Complex();
+            result.Real = complex1.Real + complex2.Real;
+            result.Imaginary = complex1.Imaginary + complex2.Imaginary;
+            return result;
+        }
     }
-    
+   
     internal class Program
     {
         public static void Main(string[] args)
         {
-
-            Sentence sentence = new Sentence("I am BATMAN! :)");
-            sentence.PrintWords();
-            sentence.PrintWordOfIndex(5);
-           
+            Complex number1 = new Complex(3, 4);
+            Complex number2 = new Complex(4, 5);
+            Complex number3 = number1 + number2;
+            number3.PrintNumber(); 
         }
     }
 }
