@@ -2,42 +2,70 @@
 using System.Collections ;
 namespace oopUni
 {
+
+    class Number // for numbers between 1 - 999
+    {
+        private int Num;
+        private ArrayList Dividers;
+
+        public int num {
+            set => Num = value;
+            get => Num;
+        }
+
+        public Number()
+        {
+            Random rnd = new Random();
+            Num = rnd.Next(1, 999);
+        }
+
+        public Number(int _num)
+        {
+            if (_num >= 1 && _num <= 999)
+            {
+                Num = _num;
+            }
+            else
+            {
+                Console.WriteLine("Number out of range , Number set to a random number");
+                Random rnd = new Random();
+                Num = rnd.Next(1, 999);
+            }
+        }
+
+        private void CalculateDividers()
+        {
+            Dividers = new ArrayList();
+
+            
+            for (int i = 2 ; i < Num ; i++)
+            {
+                if (Num % i == 0)
+                {
+                    Dividers.Add(i);
+                }
+            }
+        }
+
+        public void PrintDividers()
+        {
+            CalculateDividers();
+            Console.WriteLine("The dividers of "+Num+" are :");
+
+            foreach (var var in Dividers)
+            {
+                Console.WriteLine(var);
+            }
+        }
+    }
     internal class Program
     {
         public static void Main(string[] args)
         {
-            ArrayList List = new ArrayList();
-            List.Add(5);
-            List.Add(1.0f);
-            List.Add("Hello");
-            Stack stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.Push(5);
-            stack.Pop();
-            Queue queue = new Queue();
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
-            queue.Enqueue(4);
-            queue.Enqueue(5);
-            queue.Dequeue();
-            foreach (var var in queue)
-            {
-                Console.WriteLine(var);
-            }
-            Console.WriteLine("==============");
-            foreach (var var in stack)
-            {
-                Console.WriteLine(var);
-            }
-            Console.WriteLine("==============");
-            foreach (var var in List)
-            {
-                Console.WriteLine(var);
-            }
+
+            Number num = new Number(60);
+            num.PrintDividers();
+            
         }
     }
 }
