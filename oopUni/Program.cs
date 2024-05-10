@@ -50,11 +50,18 @@ namespace oopUni
         public void PrintDividers()
         {
             CalculateDividers();
-            Console.WriteLine("The dividers of "+Num+" are :");
-
-            foreach (var var in Dividers)
+            if (Dividers.Count == 0)
             {
-                Console.WriteLine(var);
+                Console.WriteLine(Num+" is a Prime Number");
+            }
+            else
+            {
+                Console.WriteLine("The dividers of " + Num + " are :");
+
+                foreach (var var in Dividers)
+                {
+                    Console.WriteLine(var);
+                }
             }
         }
     }
@@ -63,7 +70,7 @@ namespace oopUni
         public static void Main(string[] args)
         {
 
-            Number num = new Number(60);
+            Number num = new Number(23);
             num.PrintDividers();
             
         }
